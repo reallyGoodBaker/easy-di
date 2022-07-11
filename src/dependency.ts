@@ -1,4 +1,4 @@
-import { ServiceCollection } from '@di/store'
+import { ServiceCollection } from './store'
 
 export class Dependency {
     private _deps: any[] = []

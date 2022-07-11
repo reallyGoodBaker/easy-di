@@ -1,4 +1,4 @@
-import type { Identifier, Descriptor, ServiceCollectionOpt } from '@di/types'
+import type { Identifier, Descriptor, ServiceCollectionOpt } from './types'
 
 function createDescriptor<T>(service: any, singleton: boolean = true, staticArgs: any[] = []): Descriptor<T> {
     const desc = {

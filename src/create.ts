@@ -1,7 +1,7 @@
-import { ServiceCollection, _identifiers } from '@di/store'
-import { _deps, valideDependencies } from '@di/dependency'
-import { createIdentifier } from '@di/identifier'
-import { Identifier } from '@di/types'
+import { ServiceCollection, _identifiers } from './store'
+import { _deps, valideDependencies } from './dependency'
+import { createIdentifier } from './identifier'
+import { Identifier } from './types'
 
 function _gatherDeps(service: any) {
     const dep = _deps.get(service)
