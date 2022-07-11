@@ -1,0 +1,2 @@
+# easy-di
+ Dependency inject
