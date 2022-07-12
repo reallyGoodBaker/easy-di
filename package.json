@@ -1,0 +1,22 @@
+{
+  "name": "easy-di",
+  "version": "1.0.0",
+  "description": "Dependency inject",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tsc && node ./dist/test/main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reallyGoodBaker/easy-di.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reallyGoodBaker/easy-di/issues"
+  },
+  "homepage": "https://github.com/reallyGoodBaker/easy-di#readme"
+}
