@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tsc && node ./dist/test/main"
+    "test": "tsc && node ./bundle/test/main"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/reallyGoodBaker/easy-di/issues"
   },
-  "homepage": "https://github.com/reallyGoodBaker/easy-di#readme"
+  "homepage": "https://github.com/reallyGoodBaker/easy-di#readme",
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.76.0",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "typescript": "^4.7.4"
+  }
 }
