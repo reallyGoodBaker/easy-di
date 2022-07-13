@@ -93,7 +93,7 @@ export class InstantiationService implements IInstantiationService {
     }
 
 
-    invoke(func: (accessor: { get(key: string, args?: any[]): any }) => void) {
+    invoke(func: (accessor: { get<T>(key: string, args?: any[]): T }) => void) {
         const self = this
 
         Reflect.apply(func, undefined, [{

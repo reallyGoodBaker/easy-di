@@ -1,6 +1,6 @@
 import {InstantiationService, ServiceCollection} from '../src/index'
-import {A} from './consumer-A'
-import {IA} from './interface-A'
+import {A, B} from './consumer'
+import {IA, IB} from './interface'
 
 class App {
     constructor(
@@ -10,17 +10,26 @@ class App {
 
     startApp() {
         this.a.sayHi()
+
+        service.invoke(accessor => {
+            const instance = accessor.get<IB>('B')
+
+            instance.foo()
+        })
     }
 }
 
 //通过初始化服务构建类实例
-new InstantiationService(
+var service = new InstantiationService(
     //为初始化服务提供接口identifier与实现类的绑定
     new ServiceCollection([
         //[Identifier, {new(): any}, any[]]
         //Index 0: createIdentifier<T>(uid: string) 函数返回的Identifier对象
         //Index 1: 实现类
         //Index 2: 初始化类时的静态参数（选填）
-        [IA, A]
+        [IA, A],
+        [IB, B]
     ])
-).createInstance<App>(App).startApp()
+)
+
+service.createInstance<App>(App).startApp()
