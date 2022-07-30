@@ -1,6 +1,6 @@
-import { _identifiers } from './store'
-import { storeDependency } from './dependency'
-import type { Identifier } from './types'
+import { _identifiers } from '@di/store'
+import { storeDependency } from '@di/dependency'
+import type { Identifier } from '@di/types'
 
 export function createIdentifier<T>(key: string): Identifier<T> {
     if (_identifiers.has(key)) {

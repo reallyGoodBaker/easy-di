@@ -1,3 +1,3 @@
-export * from './create'
-export { createIdentifier } from './identifier'
-export { ServiceCollection } from './store'
+export * from '@di/create'
+export { createIdentifier } from '@di/identifier'
+export { ServiceCollection } from '@di/store'
